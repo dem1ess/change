@@ -1,10 +1,11 @@
 import './header.css'
 
-function Header(props) {
+function Header({rates}) {
   return (
       <div className="usdeur">
-        <div>USD: {props.rates.USDT.toFixed(2)}</div>
-        <div>EUR: {props.rates.EOS.toFixed(2)}</div>
+      <div className='USD'>USD: {rates.USDT.toFixed(2)}</div>
+      
+      <div className='EUR'>EUR: {rates.EOS.toFixed(2)}</div>
      </div>
   );
 }

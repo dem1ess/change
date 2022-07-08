@@ -11,11 +11,11 @@ function App() {
   const [currency1, setCurrency1] = useState('USD');
   const [currency2, setCurrency2] = useState('EUR');
   const [rates, setRates] = useState([]);
-  const myApiKey = process.env.secretkey
+  const myApiKey = process.env.REACT_APP_API
 
 
   try {useEffect(() => {
-    axios.get(`http://api.coinlayer.com/api/live?access_key=${myApiKey}&target=UAH}`)
+    axios.get(`http://api.coinlayer.com/api/live?access_key=${myApiKey}&target=UAH`)
         .then(response => {
           setRates(response.data.rates);
         })
@@ -60,7 +60,7 @@ function format(number) {
   return (
    
     <div className='wrapper'>
-      <Header rates={rates} />
+      <Header rates={rates}/>
       <CurrencyInput
         onAmountChange={handleAmount1Change}
         onCurrencyChange={handleCurrency1Change}

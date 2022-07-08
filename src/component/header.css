@@ -1,3 +1,4 @@
+
 .usdeur {
   height: 60px;
     width: 100%;
@@ -5,4 +6,15 @@
     margin-bottom: 200px;
     box-shadow: 0px 5px 10px rgba(15, 15, 15, 0.228);
     text-align: center;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+}
+.EUR {
+flex-grow: 5;
+padding: 20px;
+}
+.USD {
+flex-grow: 5;
+padding: 20px;
 }
